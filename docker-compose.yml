@@ -1,0 +1,13 @@
+  app: 
+    container_name: react_docker_app
+    build: .
+    dockerfile: Dockerfile
+    command: npm start
+    volumes:
+      - '.:/app'
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '8000:8000'
+    expose:
+      - 8000
